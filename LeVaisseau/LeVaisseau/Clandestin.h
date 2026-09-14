@@ -4,7 +4,7 @@
 class Clandestin:public Vaisseau
 {
 public:
-	Clandestin();
+	Clandestin(Faction* _faction);
 	~Clandestin();
 
 	virtual string to_string();

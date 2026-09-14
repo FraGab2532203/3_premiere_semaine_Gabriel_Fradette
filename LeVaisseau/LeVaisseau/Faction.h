@@ -1,6 +1,8 @@
 #pragma once
 #include "Vaisseau.h"
 
+
+
 class Faction
 {
 private:
@@ -14,6 +16,8 @@ public:
 	Faction(int attaque, int defense, int vie, int capacite, string nom);
 	~Faction();
 
-	string getNom();
+	virtual string getNom();
+	virtual string to_string();
+
 };
 

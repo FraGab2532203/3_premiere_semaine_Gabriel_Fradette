@@ -1,6 +1,6 @@
 #include "Clandestin.h"
 
-Clandestin::Clandestin():Vaisseau(1, 11, 4, 5, "Vaisseau Clandestin", 1, 100) {}
+Clandestin::Clandestin(Faction* _faction):Vaisseau(1, 11, 4, 5, "Vaisseau Clandestin", 1, 100,_faction) {}
 Clandestin::~Clandestin()
 {
 

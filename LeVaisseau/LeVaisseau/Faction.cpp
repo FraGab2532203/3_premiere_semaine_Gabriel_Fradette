@@ -1,5 +1,4 @@
 #include "Faction.h"
-#include "Vaisseau.h"
 Faction::Faction(){}
 Faction::Faction(int _attaque, int _defense, int _vie, int _capacite, string _nom)
 {
@@ -17,4 +16,10 @@ Faction::~Faction()
 string Faction::getNom()
 {
 	return nom;
+}
+
+string Faction::to_string()
+{
+	string message = (nom+"\n");
+	return message;
 }

@@ -4,7 +4,7 @@
 class Quincaillerie :public Vaisseau
 {
 public:
-	Quincaillerie();
+	Quincaillerie(Faction* _faction);
 	~Quincaillerie();
 
 	virtual string to_string();

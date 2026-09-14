@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 using std::string;
-
+class Faction;
 class Vaisseau
 {
 private:
@@ -12,8 +12,11 @@ private:
 	string nom;
 	int niveau;
 	int exp;
+	Faction* faction;
 public:
-	Vaisseau(int attaque, int defense, int vie, int capacite, string nom, int niveau, int exp);
+	Vaisseau(int attaque, int defense, int vie, int capacite, string nom, int niveau, int exp, Faction* faction);
+	Vaisseau(Faction* _faction);
+
 	~Vaisseau();
 
 

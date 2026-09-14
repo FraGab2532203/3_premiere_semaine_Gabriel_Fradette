@@ -125,16 +125,28 @@
   <ItemGroup>
     <ClCompile Include="Clandestin.cpp" />
     <ClCompile Include="Faction.cpp" />
+    <ClCompile Include="FactionBleu.cpp" />
+    <ClCompile Include="FactionRouge.cpp" />
+    <ClCompile Include="FactoryVaisseau.cpp" />
     <ClCompile Include="LeVaisseau.cpp" />
     <ClCompile Include="Quincaillerie.cpp" />
+    <ClCompile Include="Station.cpp" />
     <ClCompile Include="Toilette.cpp" />
+    <ClCompile Include="TypeVaisseau.cpp" />
+    <ClCompile Include="Utilitaire.cpp" />
     <ClCompile Include="Vaisseau.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clandestin.h" />
     <ClInclude Include="Faction.h" />
+    <ClInclude Include="FactionBleu.h" />
+    <ClInclude Include="FactionRouge.h" />
+    <ClInclude Include="FactoryVaisseau.h" />
     <ClInclude Include="Quincaillerie.h" />
+    <ClInclude Include="Station.h" />
     <ClInclude Include="Toilette.h" />
+    <ClInclude Include="TypeVaisseau.h" />
+    <ClInclude Include="Utilitaire.h" />
     <ClInclude Include="Vaisseau.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
