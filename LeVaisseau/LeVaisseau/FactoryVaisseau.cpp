@@ -6,14 +6,14 @@ Vaisseau* FactoryVaisseau::getRandomVaisseau()
 
 	Faction* maFaction = getRandomFaction();
 
-	TypeVaisseau typeV = (TypeVaisseau)Utilitaire::genererNb(1, 3);
+	TypeVaisseau typeV = (TypeVaisseau)Utilitaire::genererNb(0, 2);
+
 	if (typeV == TypeVaisseau::Toilette)
 		vaisseau = new Toilette(maFaction);
 	else if (typeV == TypeVaisseau::Quincaillerie)
 		vaisseau = new Quincaillerie(maFaction);
-	else
+	else if (typeV == TypeVaisseau::Clandestin)
 		vaisseau = new Clandestin(maFaction);
-	std::cout << maFaction->to_string();
 	return vaisseau;
 }
 Faction* FactoryVaisseau::getRandomFaction()

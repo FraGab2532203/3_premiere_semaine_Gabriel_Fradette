@@ -12,7 +12,9 @@ public:
 	~Station();
 
 	std::vector<Vaisseau*> getVaisseauDispo();
-	void init();
+	std::vector<Vaisseau*>  init();
 	void ajouterVaisseau(Vaisseau* vaisseau);
+
+	string to_string();
 };
 

@@ -1,7 +1,7 @@
 #pragma once
 enum class TypeVaisseau {
-	Toilette = 1,
-	Quincaillerie = 2,
-	Clandestin = 3
+	Toilette = 0,
+	Quincaillerie = 1,
+	Clandestin = 2
 };
 

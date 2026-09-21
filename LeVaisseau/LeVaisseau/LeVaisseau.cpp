@@ -8,14 +8,14 @@
 #include "Clandestin.h"
 #include "Quincaillerie.h"
 #include "FactoryVaisseau.h"
-
+#include "Station.h"
 
 
 int main()
 {
-#include <iostream>
+	int banque = 67000;
 	using namespace std;
-
+	srand(time(nullptr));
 	cout << R"(
 
         ____/____________________________________________________________________________________________________________________________________________________\____
@@ -39,16 +39,48 @@ _____________________________||_____||_____||_____||_____||_____||_____||_____||
  \__________________________________________________________________________________________________________________________________________________________/
 
 )";
+	int choix = 0;
+	int choixVaisseau = 0;
+	Station station;
+	std::vector<Vaisseau*> vecVaisseau;
+	vecVaisseau = station.init();
 
+	std::vector<Vaisseau*> vaisseauAchete;
 
-	srand(time(NULL));
-	std::cout << "...Production d'un vaisseau" << std::endl;
-	Vaisseau* monVaisseau = FactoryVaisseau::getRandomVaisseau();
-	std::cout << monVaisseau->to_string();
+	while (choix != 5)
+	{
+		std::cout << "Banque : " + std::to_string(banque) + "\n";
 
+		cout << "\n1 - Voir les information de la station\n";
+		cout << "2 - Voir la liste des vaisseaux disponibles dans la station\n";
+		cout << "3 - Acheter un vaisseau\n";
+		cout << "4 - Afficher vaisseau acheté\n";
+		cin >> choix;
+		if (choix == 1)
+			std::cout << station.to_string();
+		else if (choix == 2)
+			for (int i = 0; i < 3; i++)
+			{
+				std::cout << vecVaisseau[i]->to_string() + "\n";
+			}
+		else if (choix == 3)
+		{
+			cout << "quelle vaisseau voulez-vous achteté ? \n";
+			cin >> choixVaisseau;
 
-	delete monVaisseau;
-	monVaisseau = NULL;
+			vaisseauAchete.push_back(vecVaisseau[choixVaisseau+1]);
+			banque = banque - 1000;
+		}
+		else
+		{
+			for (int i = 0; i < vaisseauAchete.size(); i++)
+			{
+				std::cout << vaisseauAchete[i]->to_string() + "\n";
+			}
+		}
+
+	}
+
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
